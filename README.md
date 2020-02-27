@@ -14,6 +14,8 @@ REMOTE="IP_or_FQDN" # The IP of remote machine
 
 echo "yes \n" | sshpass -p $TEMP_PASS ssh-copy-id -o StrictHostKeyChecking=no $USER@$REMOTE
 ```
+
+You need to mark the file as executable: `chmod +x auto-ssh.sh`
 ***
 ### References
 *  [ssh](https://www.ssh.com/ssh/command)
