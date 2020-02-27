@@ -1,4 +1,22 @@
 # wizard-ssh-copy-id
-Automating ssh-copy-id Answer “Yes” and copy the password by using sshpass 
+## Automating ssh-copy-id Answer “Yes” and copy the password by using sshpass 
 
-Here sample way to execute `[ssh-copy-id](https://linux.die.net/man/1/ssh-copy-id)` with password by using `[sshpass](https://linux.die.net/man/1/sshpass)` and answare `YES` for the first time connection
+Here sample way how to execute `ssh-copy-id` with password by using `sshpass` and answering`YES` for the first time connection
+
+```
+# install sshpass 
+sudo apt-get install sshpass -y # ubuntu
+sudo yum install -y sshpass # centos
+
+TEMP_PASS="MySecurePassword" # The password to pass over ssh
+USER="root" # The user we going to use
+REMOTE="IP_or_FQDN" # The IP of remote machine
+
+echo "yes \n" | sshpass -p $TEMP_PASS ssh-copy-id -o StrictHostKeyChecking=no $USER@$REMOTE
+```
+***
+### References
+*  [ssh](https://www.ssh.com/ssh/command)
+* [ ssh-copy-id](https://www.ssh.com/ssh/copy-id)
+* [sshpass](https://linux.die.net/man/1/sshpass)
+
