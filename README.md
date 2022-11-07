@@ -22,3 +22,5 @@ You need to mark the file as executable: `chmod +x auto-ssh.sh`
 * [ ssh-copy-id](https://www.ssh.com/ssh/copy-id)
 * [sshpass](https://linux.die.net/man/1/sshpass)
 
+#
+<a href="https://www.buymeacoffee.com/haim_cohen" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
